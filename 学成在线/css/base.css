@@ -1,0 +1,176 @@
+/*
+* @Author: 26291
+* @Date:   2019-05-25 15:21:24
+* @Last Modified by:   26291
+* @Last Modified time: 2019-05-28 17:59:08
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+em, i {
+	font-style: normal
+}
+
+li {
+	list-style: none
+}
+
+img {
+	border: 0;
+	vertical-align: middle
+}
+
+button {
+	cursor: pointer
+}
+
+a {
+	color: #666;
+	text-decoration: none
+}
+
+a:hover {
+	color: #e33333
+}
+
+button, input {
+	font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+	font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif;
+	color: #666;
+}
+
+.hide, .none {
+	display: none
+}
+
+.clearfix::after {
+	visibility: hidden;
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0
+}
+
+.clearfix {
+	*zoom: 1
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7kkyc2');
+  src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* header part start */
+body {
+	background-color: #f3f5f7;
+}
+header {
+	width: 1300px;
+	height: 100px;
+	/* background-color: pink; */
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.logo {
+	width: 195px;
+	height: 42px;
+	float: left;
+}
+.logo a {
+	height: 42px;
+	display: block;
+	background: url('../images/logo.jpg') no-repeat ;
+	text-indent: -5em;
+	overflow: hidden;
+}
+nav {
+	height: 40px;
+	float: left;
+	margin-left:70px;
+}
+nav  li {
+	height: 40px;
+	float: left;
+	line-height: 40px;
+	margin-left: 25px;
+}
+nav  li a {
+	display: block;
+	height: 100%;
+	color: #050505;
+	font-size: 18px;
+	padding: 0 10px;
+}
+nav li a:hover {
+	border-bottom: 2px solid #00a4ff;
+}
+.search {
+	width: 410px;
+	height: 40px;
+	float: left;
+	margin-left: 100px;
+	border:1px solid #00a4ff;
+}
+.search input {
+	height: 38px;
+	width: 360px;
+	float: left;
+	padding-left: 20px;
+	color: #bfbfbf;
+	outline: none;
+}
+.search button {
+	width: 48px;
+	height: 38px;
+	float: left;
+	background-color: #00a4ff;
+	border: 0;
+	color: #fff;
+	font-family: icomoon;
+	font-size: 20px;
+}
+.personal  {
+	text-align: right;
+	height: 40px;
+	line-height: 40px;
+	float: right;
+}
+.personal dt, .personal dd {
+	float: left;
+}
+.personal s {
+	position: relative;
+	margin: 0 30px;
+}
+.personal s::after {
+	content: "";
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	top: -4px;
+	left: 14px;
+}
+.personal span img{
+	border-radius: 50%;
+	margin-right: 10px;
+	transition: all 2s;
+}
+.personal span img:hover{
+	transform: rotate(360deg);
+}
+/* header part end */
