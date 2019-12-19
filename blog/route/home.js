@@ -4,10 +4,10 @@ const express = require("express");
 const home = express.Router();
 
 // 渲染文章页面
-home.get("/", require("./home/default"));
+home.get("", require("./home/default"));
 
 // 渲染详细页面
-home.get("/article", require("./home/article"));
+home.get("/article/:id", require("./home/article"));
 
 // 导出路由对象
 module.exports = home;

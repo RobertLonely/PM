@@ -47,10 +47,12 @@ textarea {
 
 .fl {
   float: left;
+  overflow: hidden;
 }
 
 .fr {
   float: right;
+  overflow: hidden;
 }
 
 .pr {
@@ -137,7 +139,6 @@ textarea {
 }
 
 .article-info span {
-  float: left;
   padding-right: 6px;
   margin-right: 6px;
   position: relative;

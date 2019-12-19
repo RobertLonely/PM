@@ -1,7 +1,7 @@
 {{extend './commons/layout.art'}}
 
 {{block 'title'}}
-<title>首页</title>
+<title>博客首页</title>
 {{/block}}
 
 {{block 'style'}}
@@ -13,18 +13,22 @@
 
 <!-- 文章列表开始 -->
 <ul class="list w1100">
-  {{each articles}}
+  {{each articles.records}}
   <li class="{{ $index % 2 === 0 ? 'fl' : 'fr' }}">
-    <a href="/home/article" class="thumbnail">
+    <a href="/home/article/{{@$value._id }}" class="thumbnail">
       <img src="{{ $value.cover }}" />
     </a>
     <div class="content">
-      <a class="article-title" href="article.html">{{ $value.title }}</a>
+      <a class="article-title" href="/home/article/{{@$value._id }}">{{
+        $value.title
+      }}</a>
       <div class="article-info">
         <span class="author">{{ $value.author.username }}</span>
         <span>{{ dateformat($value.publicDate, "yyyy-mm-dd") }}</span>
       </div>
-      <div class="brief">{{@ $value.content }}</div>
+      <div class="brief">
+        {{@ $value.content }}
+      </div>
     </div>
   </li>
   {{/each}}
@@ -33,13 +37,21 @@
 
 <!-- 分页开始 -->
 <div class="page w1100">
-  <a href="#">上一页</a>
-  <a href="#" class="active">1</a>
-  <a href="#">2</a>
-  <a href="#">3</a>
-  <a href="#">4</a>
-  <a href="#">5</a>
-  <a href="#">下一页</a>
+  {{if articles.page>1}}
+  <a href="/home?page={{ articles.page - 1 }}">上一页</a>
+  {{/if}}
+
+  {{each articles.display}}
+  <a
+    href="/home?page={{ $value }}"
+    class="{{ articles.page === $value ? 'active' : '' }}"
+    >{{ $value }}</a
+  >
+  {{/each}}
+
+  {{if articles.page<2}}
+  <a href="/home?page={{ articles.page - 0 + 1 }}">下一页</a>
+  {{/if}}
 </div>
 <!-- 分页结束 -->
 {{/block}}
