@@ -38,6 +38,8 @@
 
 ## 文章管理页面
 
+<img src="./assets/images/article.png" style="zoom:15%;" />
+
 1. 渲染文章管理页面
 
    - 使用第三方`dateForm`时间格式化插件，格式化时间
@@ -45,14 +47,26 @@
    - 使用集合关联查询，显示作者在用户列表中的名字
 
    - 使用第三方`mongoose-sex-page`插件，对页面进行分页
+   
 2. 发布文章
+   
+
+<img src="./assets/images/publish.png" style="zoom:15%;" />
+
    - 给表单上传文件控件绑定一个监听事件，使用**javascript**内置的`FileReader()`读取图片文件，显示在发布文章页面
    - 使用第三方插件`formidable`,解析提交表单中的数据，并添加到文章集合中
+
 3. 修改文章
+
 4. 删除文章
 
-<img src="./assets/images/article.png" style="zoom:15%;" />
+
 
 ## 博客首页
 
 <img src="./assets/images/index.png" style="zoom:15%;" />
+
+## 博客详情页
+
+<img src="./assets/images/detail.png" style="zoom:15%;" />
+
