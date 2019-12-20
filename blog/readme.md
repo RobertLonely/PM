@@ -1,3 +1,3 @@
 # 博客管理系统
 
-![](./assets/images/index.png)
+<img src="./assets/images/index.png" style="zoom:25%;" />
